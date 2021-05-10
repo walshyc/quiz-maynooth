@@ -168,13 +168,8 @@ const ActiveQuiz = (props) => {
             You got {getResults()}%!
           </div>
         </div>
-        <div
-          className={
-            'grid grid-cols-1 sm:grid-cols-' +
-            quizLength / roundsNumber +
-            ' gap-2 mx-12 '
-          }
-        >
+
+        <div className="flex flex-wrap mx-10">
           {answersArray.map((current, i) => {
             i++;
             return (
@@ -192,7 +187,7 @@ const ActiveQuiz = (props) => {
           })}
         </div>
         <Link to="/results">
-          <div className="flex transform scale-105 my-4 justify-center text-white bg-blue-600 px-6 py-4 rounded-full z-30 ">
+          <div className="flex transform scale-105 mx-20 my-4 justify-center text-white bg-blue-600 px-6 py-4 rounded-full z-30 ">
             <div className=" text-white z-30 text-center text-lg ">
               View The Quiz Leaderboard
             </div>
